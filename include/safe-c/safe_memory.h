@@ -1,5 +1,5 @@
-#ifndef SAFE_MEMORY_H_
-#define SAFE_MEMORY_H_
+#ifndef SAFE_MEMORY_H
+#define SAFE_MEMORY_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -150,4 +150,4 @@ void* safe_realloc_function(void** pointer_address, const size_t size,
 }
 #endif
 
-#endif /* SAFE_MEMORY_H_ */
+#endif /* SAFE_MEMORY_H */

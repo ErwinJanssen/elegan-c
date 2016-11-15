@@ -1,5 +1,5 @@
-#ifndef SAFE_STRING_H_
-#define SAFE_STRING_H_
+#ifndef SAFE_STRING_H
+#define SAFE_STRING_H
 
 #ifdef __cplusplus
 extern "C" {
@@ -12,4 +12,4 @@ typedef c_string* c_string_array;
 }
 #endif
 
-#endif /* SAFE_STRING_H_ */
+#endif /* SAFE_STRING_H */
