@@ -3,8 +3,8 @@
 #include <stdio.h>
 #include <string.h>
 
-static void print_zero_memory_requested(const char* calling_function,
-        const char* target_function, const char* variable_name)
+static void print_zero_memory_requested(const_c_string calling_function,
+        const_c_string target_function, const_c_string variable_name)
 {
     fprintf(stderr, "Error allocating memory: The function '%s' called '%s' "
             "and requested zero memory ('%s' == 0). The pointer should "
@@ -12,8 +12,8 @@ static void print_zero_memory_requested(const char* calling_function,
             target_function, variable_name);
 }
 
-static void print_memory_allocation_error(const char* calling_function,
-        const char* target_function, const size_t size)
+static void print_memory_allocation_error(const_c_string calling_function,
+        const_c_string target_function, const size_t size)
 {
     fprintf(stderr, "Error allocating memory: The function '%s' called '%s' "
             "requesting %zu bytes of memory, but an error occurred allocating "
@@ -21,7 +21,7 @@ static void print_memory_allocation_error(const char* calling_function,
             calling_function, target_function, size);
 }
 
-void* safe_malloc_function(const size_t size, const char* calling_function)
+void* safe_malloc_function(const size_t size, const_c_string calling_function)
 {
     if (size == 0)
     {
@@ -49,7 +49,7 @@ void safe_free_function(void** pointer_address)
 }
 
 void* safe_calloc_function(const size_t number_of_elements,
-        const size_t element_size, const char* calling_function)
+        const size_t element_size, const_c_string calling_function)
 {
     if (number_of_elements == 0)
     {
@@ -80,7 +80,7 @@ void* safe_calloc_function(const size_t number_of_elements,
 }
 
 void* safe_realloc_function(void** pointer_address, const size_t size,
-        const char* calling_function)
+        const_c_string calling_function)
 {
     if (!pointer_address)
     {

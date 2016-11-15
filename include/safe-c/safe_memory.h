@@ -7,6 +7,8 @@ extern "C" {
 
 #include <stdlib.h>
 
+#include "safe-c/safe_string.h"
+
 /**
  * Memory allocation with strict boundary and error checking.
  *
@@ -32,7 +34,7 @@ extern "C" {
  *      call `exit()` and print an error message indicating the caller function
  *      and the amount of memory requested.
  */
-void* safe_malloc_function(const size_t size, const char* calling_function);
+void* safe_malloc_function(const size_t size, const_c_string calling_function);
 
 #define safe_malloc(size) safe_malloc_function(size, __FUNCTION__);
 
@@ -89,7 +91,7 @@ void safe_free_function(void** pointer_address);
  *      and the amount of memory requested.
  */
 void* safe_calloc_function(const size_t number_of_elements,
-        const size_t element_size, const char* calling_function);
+        const size_t element_size, const_c_string calling_function);
 
 #define safe_calloc(number_of_elements, element_size) \
         safe_calloc_function(number_of_elements, element_size, __FUNCTION__)
@@ -142,7 +144,7 @@ void* safe_calloc_function(const size_t number_of_elements,
 *      and the amount of memory requested.
 */
 void* safe_realloc_function(void** pointer_address, const size_t size,
-        const char* calling_function);
+        const_c_string calling_function);
 
 #define safe_realloc(pointer, size) safe_realloc_function((void**) &(pointer), size, __FUNCTION__)
 

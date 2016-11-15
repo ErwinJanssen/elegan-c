@@ -6,6 +6,7 @@ extern "C" {
 #endif
 
 typedef char* c_string;
+typedef const char* const_c_string;
 typedef c_string* c_string_array;
 
 #ifdef __cplusplus
