@@ -5,9 +5,9 @@
 extern "C" {
 #endif
 
-typedef char* c_string;
-typedef const char* const_c_string;
-typedef c_string* c_string_array;
+typedef char* cstring;
+typedef const char* const_cstring;
+typedef cstring* cstring_array;
 
 #ifdef __cplusplus
 }
