@@ -5,3 +5,4 @@ function(add_unit_test test_name)
 endfunction(add_unit_test)
 
 add_subdirectory(safe_memory)
+add_subdirectory(safe_string)
