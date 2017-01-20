@@ -9,7 +9,7 @@ env:
   global:
     - CTEST_OUTPUT_ON_FAILURE=TRUE
     # Coverity key
-    - secure: "m7LKrx/ijIK4jhEmCBYXt1/no2isHWhMUEi64DWlmEQE/KZAnBV+VvBCThGvnaWdytB04Aa68EYO1GQP4TfsNYTt6+E5Ou2xqKRng+A1Wsqe9B4aTK4tpLps+wuA9oxLrBsoRssMaOLePtwvD39rhJVTixLsMEbrHHtkx2wBDVlaogDbc47qMTMi3y+2z8p87x+uHTgwqjrBB/cFMvkTl2s+cj8Q6TtjluEmd2uK2xqC8dOUm40m966m2RNgAszY0Ov8SnByeN2E3JBr8IT1Luesy7JquLn4H5wYraSODQW9qleL1O02QxB2JHpeNMR6MhsSgzvVCVWHp41hg1Xzi8SQywE3NDP2vhBJ+lwoXQXRcAuenl+/BoFS1RbTlGdSACvz55pi8jtsF4Tnzk1qhw/bOk0KKyAhHRm89IRe5/wcug2OG+6a/UDkiEUXSB5zq2cumZUYAYIW7eJ5YcxVwSEihGYOJK5B7NO5xNKMdnCXDio98m74OlO9y0n/BYVLo8j+xF+q/8NOEBy9V9JoJrIKinGre5X1xamLiARGKmTkn/kXBNRoV9VSY0WQd+9Ffj+t1O/Y/NFgPdE4lTeM5KanWpsT818Hvck1ITbbrn5fMV0dg431ctOfI/NtKXy1G2xb+dIqBdvDHY6rSM42paYDRZIKjpQskGcHEwrdU7M="
+    - secure: "KgZwBsk2jUpJcOJkNndXDvzJ1pe4uVSHUtfNVGgl+uZTyEVmCr8/1xi4u6bQwpBTsB3zku/XbvoT57MPfXrosxgE9jI4W1fdnVDeA/gbXtEXBfseEVz+D4oKiBGh5BR3ARU8b2gkpooL7OU9bK2QZ9LiKtXAJ3jaUJUBlFlHf6ulJKG33YX6IjaJ4kQm4e0adhEd8+iiONo/EVCtcXJqsFiphyRd8+jZL3WgVUOdU69yB0tChi+caUIdWnaFxQdD9CkJgBJB8naJW2qT/Y7LnVdFpcLC60mOEw4WvaNOqnKaKm4VZP3638Q5im9OZEXjtLhz2mPOiL3UwDhb+V+8UHML0lrMaftRpgPMZXTnYO8b2AwaI1OmIY0/s3DANF3RiBnxdlZebXBptu1d3CgQxRtjcIuOZJiNGNx7fW6fB9X+TrzyYL0Lc/vctPctRtMM/+lFFLGPcfRochoggF2gkGJ7iKrihhHpkGB0UniYepFZFG4Rhniz1oqICMpwAbjQ8PRs9y6r+sqmhut9uvhCKUpYwIQcjdws+WFviBJPe0q13SUpW3bQfShWpZ77aimYhEONoSdBq1189nTcTyVU8QksLJlc2fKRgXAHXGg91laO/YtpFVfLBzisbIIDtWtIA6m/piGUdMnNVt1TprOaaEns+ygIAoL6o+sVTbzyBM0="
 
   matrix:
     - COVERAGE="ENABLE_COVERAGE=ON"
@@ -24,7 +24,7 @@ before_install:
 addons:
   coverity_scan:
     project:
-      name: "VanJanssen/elegan-c"
+      name: "ErwinJanssen/elegan-c"
       description: "Build submitted via Travis CI"
     notification_email: erwinjanssen@outlook.com
     build_command_prepend: "cd ${TRAVIS_BUILD_DIR}; mkdir build; cd build; cmake .."
